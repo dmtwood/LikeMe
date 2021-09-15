@@ -28,3 +28,17 @@ print(mylist[0])
 def cutsttring(mystring):
     return mystring[0:3]
 print(cutsttring('mijntest'))
+
+
+def reverse(x):
+  return x[::-1]
+myString = 'test'
+print(reverse(myString))
+
+
+def sliceFirstThreeAndReverse(s):
+    return s[:3][::1]
+
+print(sliceFirstThreeAndReverse('test'))
+
+
