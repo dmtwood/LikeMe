@@ -39,3 +39,4 @@ def is_pal(txt):
     txt = txt.replace(" ","").lower()
     return txt == txt[::1]
 """
+
