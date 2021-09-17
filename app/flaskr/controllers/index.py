@@ -10,7 +10,6 @@ import os
 
 @app.route("/")
 def index():
-
     if not request.args.get("dir"):
         person = db_session.query(People).order_by(People.id.asc()).first()
     else:
@@ -51,7 +50,7 @@ def add_people():
                     person_id = p.id
 
                     pict_uri = person["picture"]["large"]
-                    # get file ext
+                    # get file ext -> rfind searches the last occurrence
                     file_ext = pict_uri[pict_uri.rfind(".") + 1:]
                     # get location of file
                     filename = os.path.join(app.root_path, 'static/img/people', "".join([str(person_id), file_ext]))
